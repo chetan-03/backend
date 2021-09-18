@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require('cors')
 const connectToMongo = require('./db.js')
 const app = express();
-const port = 8000
+
 connectToMongo();
 require('dotenv').config();
 //  To get api calls in fornt end
@@ -15,6 +15,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log(`iNotebook app listening at http://localhost:${port}`)
 });
