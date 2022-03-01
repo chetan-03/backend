@@ -41,7 +41,7 @@ router.post('/createuser', [
         //     .then(user => res.json(user))
         //     .catch(err => res.status(400).json({
         //     message: err.message
-        // }));
+        // })); 
         success = true;
         res.json({ authToken, success })
     }
